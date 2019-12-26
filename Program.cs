@@ -1159,7 +1159,7 @@ namespace ConsoleApp4
                         else
                             email_title = email_title+" New SaaS Order";
 
-                        MailMessage("US.MS.Purchasing.Charlotte@dimensiondata.com", "US.SaaS.ClientSupport@dimensiondata.com", cust_po_path, email_title, "Hi MS Purchasing Team,<br /><br /> "+email_comments);
+                        MailMessage("", "", cust_po_path, email_title, "Hi,<br /><br /> "+email_comments);
                         finished=true;
                     }
 
@@ -1192,7 +1192,7 @@ namespace ConsoleApp4
 
             ChromeOptions driverOptions = new ChromeOptions();
             driverOptions.AddArgument("--window-size=1280,800");
-            //driverOptions.AddArgument("--headless");
+            driverOptions.AddArgument("--headless");
             driverOptions.AddArgument("--disable-gpu");
             driverOptions.AddArgument("--hide-scrollbars");
             driverOptions.AddArgument("--allow-insecure-localhost");
